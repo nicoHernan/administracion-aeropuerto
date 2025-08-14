@@ -1,7 +1,7 @@
 // AEROLINEASCREEN
 const express = require('express');
 const router = express.Router();
-const { getLayout } = require('../config/config');
+const { getLayout } = require('../config/Config');
 const { AerolineaModel } = require('../models');
 
 // Middleware de autenticación (¡NUEVO!)
