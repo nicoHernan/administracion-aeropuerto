@@ -23,8 +23,8 @@ app.use(express.json());
 // Configuración y uso del middleware de sesión
 app.use(session({
     secret: 'tu_secreto_muy_seguro_y_largo_aqui_!@#$', // ¡IMPORTANTE! Cambia esto por una cadena de caracteres aleatoria y compleja en producción.
-    resave: false,
-    saveUninitialized: false,
+    resave: true,
+    saveUninitialized: true,// CORREGIDO: Guarda una sesión para cada usuario, incluso si no ha iniciado sesión
     cookie: {
         maxAge: 1000 * 60 * 60 * 24 // La cookie de sesión expira en 24 horas
     }
