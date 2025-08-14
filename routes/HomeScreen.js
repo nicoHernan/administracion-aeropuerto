@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { getLayout } = require('../config/Config');
 const { VueloModel, AerolineaModel, AeropuertoModel } = require('../models');
-const { generateRta } = require('../services/QwenService');
+const { generateRta } = require('../services/qwenService');
 
 /* GET home page (login form). Maneja la ruta raíz: http://localhost:3000/ */
 router.get('/', (req, res) => {
